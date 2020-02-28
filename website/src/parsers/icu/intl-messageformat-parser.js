@@ -36,7 +36,9 @@ export default {
   },
 
   parse(parser, code, opts) {
-    return parser.parse(code, opts);
+    const ast = parser.parse(code, opts);
+    console.log('icu ast', ast)
+    return ast
   },
 
   _getSettingsConfiguration() {
