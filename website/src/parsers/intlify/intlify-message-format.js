@@ -30,8 +30,8 @@ export default {
   },
 
   parse(mod, code, opts) {
-    const { createParser } = mod
-    return createParser().parse(code)
+    const { createCompiler } = mod
+    return createCompiler().compile(code)
   },
 
   getNodeName(node) {
