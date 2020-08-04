@@ -12,7 +12,8 @@ const NODE_TYPE_NAMES = [
   'List',
   'Linked',
   'LinkedKey',
-  'LinkedModifier'
+  'LinkedModifier',
+  'Literal',
 ]
 
 
@@ -30,8 +31,8 @@ export default {
   },
 
   parse(mod, code, opts) {
-    const { createCompiler } = mod
-    return createCompiler().compile(code)
+    const { createParser } = mod
+    return createParser().parse(code)
   },
 
   getNodeName(node) {
